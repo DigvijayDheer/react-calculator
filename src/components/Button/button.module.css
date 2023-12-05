@@ -1,0 +1,9 @@
+.numberButton {
+  grid-gap: 0.8rem;
+  font-size: 2rem;
+  border: 0.1rem solid #bbb;
+  border-radius: 0.2rem;
+  outline: none;
+  cursor: pointer;
+  height: 5rem;
+}
