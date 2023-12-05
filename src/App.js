@@ -9,35 +9,50 @@ function App() {
   const [input, setInput] = useState("");
   const [result, setResult] = useState("");
   const [isCalculated, setIsCalculated] = useState(false);
-  // eslint-disable-next-line
-  const [endsWithNumeric, setEndsWithNumeric] = useState(true);
 
   const handleClear = () => {
     setInput("");
     setResult("");
     setIsCalculated(false);
-    setEndsWithNumeric(true);
   };
 
   const handleClick = (value) => {
     if (value === "delete") {
       setInput((prevInput) => prevInput.slice(0, -1));
       setIsCalculated(false);
-      setEndsWithNumeric(/\d/.test(input.slice(-1)));
-    } else {
-      setInput((prevInput) => prevInput + value);
+    } else if (/[+\-*/%]/.test(value)) {
+      setInput((prevInput) => `${prevInput} ${value} `);
       setIsCalculated(false);
-      setEndsWithNumeric(/\d/.test(value));
+    } else {
+      setInput((prevInput) => `${prevInput}${value}`);
+      setIsCalculated(false);
     }
   };
 
   const handleCalculate = () => {
     try {
-      const calculatedResult = math.evaluate(input);
-      setResult(calculatedResult.toString());
+      const trimmedInput = input.trim();
+
+      const calculatedResult = math.evaluate(
+        trimmedInput.includes("%")
+          ? trimmedInput.replace("%", "/ 100")
+          : trimmedInput
+      );
+
+      setResult(formatResult(calculatedResult));
       setIsCalculated(true);
     } catch (error) {
+      console.error(error);
       setResult("");
+    }
+  };
+
+  const formatResult = (result) => {
+    if (result.toString().length > 8) {
+      const shortenedResult = result.toExponential(3);
+      return `approx: ${shortenedResult}`;
+    } else {
+      return result.toString();
     }
   };
 
@@ -54,23 +69,19 @@ function App() {
       startsWithOperator ||
       isNumber
     ) {
-      let calculatedResult;
       try {
-        if (input.includes(`%[+\-*/]*`)) {
-          calculatedResult = math.evaluate(input.replace("%", "%"));
-        } else {
-          calculatedResult = math.evaluate(input);
-        }
-        setResult(calculatedResult.toString());
+        const calculatedResult = math.evaluate(
+          input.includes("%") ? input.replace("%", "/ 100") : input
+        );
+        setResult(formatResult(calculatedResult));
       } catch (error) {
+        console.error(error);
         setResult("");
       }
     } else if (!input) {
       setResult("");
-    } else {
-      setResult(result);
     }
-  }, [input, isCalculated, result]);
+  }, [input, isCalculated]);
 
   return (
     <div className="App">

@@ -36,6 +36,8 @@
 }
 
 .para {
+  overflow: hidden;
+  text-overflow: ellipsis;
   display: inline-block;
   line-height: 4rem;
   margin: 0;
@@ -45,6 +47,7 @@
 }
 
 .headingResult {
+  text-overflow: ellipsis;
   display: inline-block;
   line-height: 6rem;
   margin: 0;

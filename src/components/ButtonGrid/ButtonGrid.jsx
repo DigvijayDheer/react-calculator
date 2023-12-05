@@ -71,7 +71,7 @@ function ButtonGrid({ handleClick, handleCalculate, handleClear }) {
       </Button>
 
       {/* Row five */}
-      <Button btnType="action">D</Button>
+      <Button btnType="number">+/-</Button>
       <Button btnType="number" onClick={() => handleClick("0")}>
         0
       </Button>
