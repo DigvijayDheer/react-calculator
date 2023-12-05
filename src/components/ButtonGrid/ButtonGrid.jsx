@@ -5,55 +5,80 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faDeleteLeft,
   faDivide,
-  faPercent,
   faXmark,
   faMinus,
   faPlus,
   faEquals,
 } from "@fortawesome/free-solid-svg-icons";
 
-function ButtonGrid() {
+function ButtonGrid({ handleClick, handleCalculate, handleClear }) {
   return (
     <div className={styles.buttonContainer}>
-      <Button btnType="action">AC</Button>
-      <Button btnType="action">
+      {/* Row one */}
+      <Button btnType="action" onClick={handleClear}>
+        AC
+      </Button>
+      <Button btnType="action" onClick={() => handleClick("%")}>
         <FontAwesomeIcon icon={faDivide} />
       </Button>
-      <Button btnType="action">
+      <Button btnType="action" onClick={() => handleClick("/")}>
         <span className={styles.specialButtonStyles}>/</span>
       </Button>
-
-      <Button btnType="action">
+      <Button btnType="action" onClick={() => handleClick("delete")}>
         <FontAwesomeIcon icon={faDeleteLeft} />
       </Button>
 
-      <Button btnType="number">7</Button>
-      <Button btnType="number">8</Button>
-      <Button btnType="number">9</Button>
-      <Button btnType="action">
+      {/* Row two */}
+      <Button btnType="number" onClick={() => handleClick("7")}>
+        7
+      </Button>
+      <Button btnType="number" onClick={() => handleClick("8")}>
+        8
+      </Button>
+      <Button btnType="number" onClick={() => handleClick("9")}>
+        9
+      </Button>
+      <Button btnType="action" onClick={() => handleClick("*")}>
         <FontAwesomeIcon icon={faXmark} />
       </Button>
 
-      <Button btnType="number">4</Button>
-      <Button btnType="number">5</Button>
-      <Button btnType="number">6</Button>
-      <Button btnType="action">
+      {/* Row three */}
+      <Button btnType="number" onClick={() => handleClick("4")}>
+        4
+      </Button>
+      <Button btnType="number" onClick={() => handleClick("5")}>
+        5
+      </Button>
+      <Button btnType="number" onClick={() => handleClick("6")}>
+        6
+      </Button>
+      <Button btnType="action" onClick={() => handleClick("-")}>
         <FontAwesomeIcon icon={faMinus} />
       </Button>
 
-      <Button btnType="number">1</Button>
-      <Button btnType="number">2</Button>
-      <Button btnType="number">3</Button>
-      <Button btnType="action">
+      {/* Row four */}
+      <Button btnType="number" onClick={() => handleClick("1")}>
+        1
+      </Button>
+      <Button btnType="number" onClick={() => handleClick("2")}>
+        2
+      </Button>
+      <Button btnType="number" onClick={() => handleClick("3")}>
+        3
+      </Button>
+      <Button btnType="action" onClick={() => handleClick("+")}>
         <FontAwesomeIcon icon={faPlus} />
       </Button>
 
-      <Button btnType="action">
-        <FontAwesomeIcon icon={faPercent} />
+      {/* Row five */}
+      <Button btnType="action">D</Button>
+      <Button btnType="number" onClick={() => handleClick("0")}>
+        0
       </Button>
-      <Button btnType="number">0</Button>
-      <Button btnType="number">.</Button>
-      <Button btnType="calculate">
+      <Button btnType="number" onClick={() => handleClick(".")}>
+        .
+      </Button>
+      <Button btnType="calculate" onClick={handleCalculate}>
         <FontAwesomeIcon icon={faEquals} />
       </Button>
     </div>

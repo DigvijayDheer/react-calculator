@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./button.module.css";
 
-function Button({ children, btnType, spanTwoColumns, spanTwoRows }) {
+function Button({ children, btnType, spanTwoColumns, spanTwoRows, onClick }) {
   let classes = styles.buttonStyles;
 
   if (btnType === "number" && spanTwoColumns) {
@@ -16,11 +16,19 @@ function Button({ children, btnType, spanTwoColumns, spanTwoRows }) {
     classes += ` ${styles.actionButton} ${styles.spanTwoRows}`;
   } else if (btnType === "action") {
     classes += ` ${styles.actionButton}`;
+  } else if (btnType === "calculate" && spanTwoColumns) {
+    classes += ` ${styles.calcButton} ${styles.spanTwoColumns}`;
+  } else if (btnType === "calculate" && spanTwoRows) {
+    classes += ` ${styles.calcButton} ${styles.spanTwoRows}`;
   } else if (btnType === "calculate") {
     classes += ` ${styles.calcButton}`;
   }
 
-  return <button className={classes}>{children}</button>;
+  return (
+    <button className={classes} onClick={onClick}>
+      {children}
+    </button>
+  );
 }
 
 export default Button;

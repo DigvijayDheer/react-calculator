@@ -15,26 +15,24 @@
   bottom: 0;
   right: 0;
   color: #fff;
-  overflow-x: hidden; /* Hide horizontal overflow */
-  overflow-y: auto; /* Enable vertical overflow */
-  max-height: 100%; /* Adjust the max height as needed */
-  max-width: 100%; /* Allow horizontal scrolling if needed */
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 100%;
+  max-width: 100%;
   padding: 0.5rem;
-  resize: none; /* Disable textarea resizing */
+  resize: none;
 }
 
-/* Style the scrollbar */
 .input::-webkit-scrollbar {
   width: 0.2rem;
 }
 
 .input::-webkit-scrollbar-thumb {
-  background-color: #ff4500; /* Color of the scrollbar thumb */
-  border-radius: 0.5rem;
+  background-color: #000;
 }
 
 .input::-webkit-scrollbar-track {
-  background-color: #000; /* Color of the scrollbar track */
+  background-color: #000;
 }
 
 .para {
@@ -46,7 +44,7 @@
   margin-bottom: 1rem;
 }
 
-.heading {
+.headingResult {
   display: inline-block;
   line-height: 6rem;
   margin: 0;
