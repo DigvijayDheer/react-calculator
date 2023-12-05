@@ -1,5 +1,8 @@
+/* Design and Developed by Digvijay Dheer */
+
+/* Styles for the CalculatorCase component */
 .calculatorCase {
-  height: 100vh;
-  width: 100vw;
-  max-width: 48rem;
+  height: 100vh; /* Set the height of the CalculatorCase to 100% of the viewport height */
+  width: 100vw; /* Set the width of the CalculatorCase to 100% of the viewport width */
+  max-width: 48rem; /* Set the maximum width of the CalculatorCase to 48 rem units */
 }

@@ -1,3 +1,6 @@
+// Design and Developed by Digvijay Dheer
+
+// Importing necessary modules and components
 import React from "react";
 import Button from "../Button/Button";
 import styles from "./buttonGrid.module.css";
@@ -11,23 +14,23 @@ import {
   faEquals,
 } from "@fortawesome/free-solid-svg-icons";
 
+// ButtonGrid component with buttons for a calculator
 function ButtonGrid({ handleClick, handleCalculate, handleClear }) {
   return (
     <div className={styles.buttonContainer}>
       {/* Row one */}
       <Button btnType="action" onClick={handleClear}>
-        AC
+        AC {/* Clear All */}
       </Button>
       <Button btnType="action" onClick={() => handleClick("%")}>
-        <FontAwesomeIcon icon={faDivide} />
+        <FontAwesomeIcon icon={faDivide} /> {/* Percentage */}
       </Button>
       <Button btnType="action" onClick={() => handleClick("/")}>
-        <span className={styles.specialButtonStyles}>/</span>
+        <span className={styles.specialButtonStyles}>/</span> {/* Division */}
       </Button>
       <Button btnType="action" onClick={() => handleClick("delete")}>
-        <FontAwesomeIcon icon={faDeleteLeft} />
+        <FontAwesomeIcon icon={faDeleteLeft} /> {/* Delete */}
       </Button>
-
       {/* Row two */}
       <Button btnType="number" onClick={() => handleClick("7")}>
         7
@@ -39,9 +42,8 @@ function ButtonGrid({ handleClick, handleCalculate, handleClear }) {
         9
       </Button>
       <Button btnType="action" onClick={() => handleClick("*")}>
-        <FontAwesomeIcon icon={faXmark} />
+        <FontAwesomeIcon icon={faXmark} /> {/* Multiplication */}
       </Button>
-
       {/* Row three */}
       <Button btnType="number" onClick={() => handleClick("4")}>
         4
@@ -53,9 +55,8 @@ function ButtonGrid({ handleClick, handleCalculate, handleClear }) {
         6
       </Button>
       <Button btnType="action" onClick={() => handleClick("-")}>
-        <FontAwesomeIcon icon={faMinus} />
+        <FontAwesomeIcon icon={faMinus} /> {/* Subtraction */}
       </Button>
-
       {/* Row four */}
       <Button btnType="number" onClick={() => handleClick("1")}>
         1
@@ -67,19 +68,19 @@ function ButtonGrid({ handleClick, handleCalculate, handleClear }) {
         3
       </Button>
       <Button btnType="action" onClick={() => handleClick("+")}>
-        <FontAwesomeIcon icon={faPlus} />
+        <FontAwesomeIcon icon={faPlus} /> {/* Addition */}
       </Button>
-
       {/* Row five */}
-      <Button btnType="number">+/-</Button>
+      <Button btnType="number">+/-</Button> {/* Change Sign */}
       <Button btnType="number" onClick={() => handleClick("0")}>
         0
       </Button>
       <Button btnType="number" onClick={() => handleClick(".")}>
         .
-      </Button>
+      </Button>{" "}
+      {/* Decimal Point */}
       <Button btnType="calculate" onClick={handleCalculate}>
-        <FontAwesomeIcon icon={faEquals} />
+        <FontAwesomeIcon icon={faEquals} /> {/* Equals */}
       </Button>
     </div>
   );

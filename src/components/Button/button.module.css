@@ -1,38 +1,48 @@
+/* Design and Developed by Digvijay Dheer */
+
+/* Common styles for all buttons */
 .buttonStyles {
-  background-color: #000;
-  font-size: 3.5rem;
-  font-weight: 500;
-  border: none;
-  outline: none;
-  cursor: pointer;
+  background-color: #000; /* Background color for all buttons */
+  font-size: 3.5rem; /* Font size for all buttons */
+  font-weight: 500; /* Font weight for all buttons */
+  border: none; /* Remove button border */
+  outline: none; /* Remove button outline */
+  cursor: pointer; /* Set cursor to pointer for interactivity */
 }
 
+/* Hover effect for all buttons */
 .buttonStyles:hover {
-  background-color: #111;
+  background-color: #111; /* Darker background color on hover */
 }
 
+/* Styles for number and action buttons */
 .numberButton,
 .actionButton {
-  color: #fff;
+  color: #fff; /* Text color for number and action buttons */
 }
 
+/* Additional style for action buttons */
 .actionButton {
-  color: #ff4500;
+  color: #ff4500; /* Orange text color for action buttons */
 }
 
+/* Styles for calculation buttons */
 .calcButton {
-  background-color: #ff4500;
-  color: #fff;
+  background-color: #ff4500; /* Background color for calculation buttons */
+  color: #fff; /* Text color for calculation buttons */
 }
 
+/* Hover effect for calculation buttons */
 .calcButton:hover {
-  background-color: #872400;
+  background-color: #872400; /* Darker background color on hover for calculation buttons */
 }
 
+/* Spanning two columns in a grid */
 .spanTwoColumns {
-  grid-column: span 2;
+  grid-column: span 2; /* Set grid column span to 2 */
 }
 
+/* Spanning two rows in a grid */
 .spanTwoRows {
-  grid-row: span 2;
+  grid-row: span 2; /* Set grid row span to 2 */
 }

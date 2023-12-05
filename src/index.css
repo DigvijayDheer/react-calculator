@@ -1,28 +1,35 @@
+/* Design and Developed by Digvijay Dheer */
+
+/* Importing Nunito Sans font from Google Fonts with various weights and styles */
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&display=swap");
 
+/* Resetting margin, padding, and box-sizing for all elements */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Setting the base font size to 10px for easier rem calculations */
 html {
   font-size: 62.5%; /* 10/16 = 62.5% */
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Nunito Sans", sans-serif; /* Applying Nunito Sans font to the entire document */
 }
 
+/* Styling the body element */
 body {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   margin: 0;
-  background-color: black;
+  background-color: black; /* Setting the background color of the body to black */
 }
 
+/* Styling the main App container */
 .App {
-  width: 100vw;
-  max-width: 48rem;
-  height: 100vh;
-  margin: auto;
+  width: 100vw; /* Setting the width of the container to 100% of the viewport width */
+  max-width: 48rem; /* Setting the maximum width of the container to 48rem */
+  height: 100vh; /* Setting the height of the container to 100% of the viewport height */
+  margin: auto; /* Centering the container horizontally */
 }

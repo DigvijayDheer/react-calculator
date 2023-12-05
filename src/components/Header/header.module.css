@@ -1,10 +1,13 @@
+/* Design and Developed by Digvijay Dheer */
+
+/* Styles for the header container */
 .headerContainer {
-  height: 5vh;
-  background-color: #000;
-  color: #ff4500;
-  font-size: 1.6rem;
-  font-weight: 800;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 5vh; /* Set the height of the header container to 5% of the viewport height */
+  background-color: #000; /* Set the background color of the header container to black */
+  color: #ff4500; /* Set the text color to orange-red */
+  font-size: 1.6rem; /* Set the font size for the header text */
+  font-weight: 800; /* Set the font weight for the header text to bold */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center content horizontally within the container */
+  align-items: center; /* Center content vertically within the container */
 }

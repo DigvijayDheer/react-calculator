@@ -1,10 +1,17 @@
+/* Design and Developed by Digvijay Dheer */
+
+/* Common styles for all buttons in the container */
 .buttonContainer {
-  height: 45vh;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  width: 100;
+  height: 45vh; /* Set height of the button container */
+  display: grid; /* Use grid layout for button placement */
+  grid-template-columns: repeat(
+    4,
+    1fr
+  ); /* Divide container into 4 equal columns */
+  width: 100; /* Note: Should be '100%' or '100px' for width to take effect */
 }
 
+/* Additional style for special buttons */
 .specialButtonStyles {
-  font-weight: 1000;
+  font-weight: 1000; /* Set higher font weight for special buttons */
 }
