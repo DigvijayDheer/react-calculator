@@ -1,6 +1,7 @@
 .buttonStyles {
   background-color: #000;
-  font-size: 2.4rem;
+  font-size: 3.5rem;
+  font-weight: 500;
   border: none;
   outline: none;
   cursor: pointer;
@@ -10,7 +11,8 @@
   background-color: #111;
 }
 
-.numberButton {
+.numberButton,
+.actionButton {
   color: #fff;
 }
 
@@ -25,4 +27,12 @@
 
 .calcButton:hover {
   background-color: #872400;
+}
+
+.spanTwoColumns {
+  grid-column: span 2;
+}
+
+.spanTwoRows {
+  grid-row: span 2;
 }

@@ -17,13 +17,14 @@ function ButtonGrid() {
     <div className={styles.buttonContainer}>
       <Button btnType="action">AC</Button>
       <Button btnType="action">
-        <FontAwesomeIcon icon={faDeleteLeft} />
-      </Button>
-      <Button btnType="action">
-        <FontAwesomeIcon icon={faPercent} />
-      </Button>
-      <Button btnType="action">
         <FontAwesomeIcon icon={faDivide} />
+      </Button>
+      <Button btnType="action">
+        <span className={styles.specialButtonStyles}>/</span>
+      </Button>
+
+      <Button btnType="action">
+        <FontAwesomeIcon icon={faDeleteLeft} />
       </Button>
 
       <Button btnType="number">7</Button>
@@ -47,7 +48,9 @@ function ButtonGrid() {
         <FontAwesomeIcon icon={faPlus} />
       </Button>
 
-      <Button btnType="action">H</Button>
+      <Button btnType="action">
+        <FontAwesomeIcon icon={faPercent} />
+      </Button>
       <Button btnType="number">0</Button>
       <Button btnType="number">.</Button>
       <Button btnType="calculate">
