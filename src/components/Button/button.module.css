@@ -1,9 +1,28 @@
-.numberButton {
-  grid-gap: 0.8rem;
-  font-size: 2rem;
-  border: 0.1rem solid #bbb;
-  border-radius: 0.2rem;
+.buttonStyles {
+  background-color: #000;
+  font-size: 2.4rem;
+  border: none;
   outline: none;
   cursor: pointer;
-  height: 5rem;
+}
+
+.buttonStyles:hover {
+  background-color: #111;
+}
+
+.numberButton {
+  color: #fff;
+}
+
+.actionButton {
+  color: #ff4500;
+}
+
+.calcButton {
+  background-color: #ff4500;
+  color: #fff;
+}
+
+.calcButton:hover {
+  background-color: #872400;
 }

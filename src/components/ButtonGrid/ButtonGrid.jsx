@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "../Button/Button";
 import styles from "./buttonGrid.module.css";
-// Import the necessary dependencies
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faDeleteLeft,
@@ -16,42 +15,42 @@ import {
 function ButtonGrid() {
   return (
     <div className={styles.buttonContainer}>
-      <Button>AC</Button>
-      <Button>
+      <Button btnType="action">AC</Button>
+      <Button btnType="action">
         <FontAwesomeIcon icon={faDeleteLeft} />
       </Button>
-      <Button>
+      <Button btnType="action">
         <FontAwesomeIcon icon={faPercent} />
       </Button>
-      <Button>
+      <Button btnType="action">
         <FontAwesomeIcon icon={faDivide} />
       </Button>
 
-      <Button>7</Button>
-      <Button>8</Button>
-      <Button>9</Button>
-      <Button>
+      <Button btnType="number">7</Button>
+      <Button btnType="number">8</Button>
+      <Button btnType="number">9</Button>
+      <Button btnType="action">
         <FontAwesomeIcon icon={faXmark} />
       </Button>
 
-      <Button>4</Button>
-      <Button>5</Button>
-      <Button>6</Button>
-      <Button>
+      <Button btnType="number">4</Button>
+      <Button btnType="number">5</Button>
+      <Button btnType="number">6</Button>
+      <Button btnType="action">
         <FontAwesomeIcon icon={faMinus} />
       </Button>
 
-      <Button>1</Button>
-      <Button>2</Button>
-      <Button>3</Button>
-      <Button>
+      <Button btnType="number">1</Button>
+      <Button btnType="number">2</Button>
+      <Button btnType="number">3</Button>
+      <Button btnType="action">
         <FontAwesomeIcon icon={faPlus} />
       </Button>
 
-      <Button>H</Button>
-      <Button>0</Button>
-      <Button>.</Button>
-      <Button>
+      <Button btnType="action">H</Button>
+      <Button btnType="number">0</Button>
+      <Button btnType="number">.</Button>
+      <Button btnType="calculate">
         <FontAwesomeIcon icon={faEquals} />
       </Button>
     </div>

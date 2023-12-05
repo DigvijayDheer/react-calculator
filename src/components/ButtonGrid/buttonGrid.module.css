@@ -2,6 +2,5 @@
   height: 45vh;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 0.1rem;
   width: 100;
 }

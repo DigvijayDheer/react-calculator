@@ -1,9 +1,54 @@
 .display {
-  grid-column: span 4;
-  background-color: #f0f0f0;
+  background-color: #000;
   padding: 0.8rem;
   font-size: 1.5em;
   text-align: right;
   height: 45vh;
-  margin-bottom: 2rem;
+  border-top: 0.1rem solid #222;
+  border-bottom: 0.1rem solid #222;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.input {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #fff;
+  overflow-x: hidden; /* Hide horizontal overflow */
+  overflow-y: auto; /* Enable vertical overflow */
+  max-height: 100%; /* Adjust the max height as needed */
+  max-width: 100%; /* Allow horizontal scrolling if needed */
+  padding: 0.5rem;
+  resize: none; /* Disable textarea resizing */
+}
+
+/* Style the scrollbar */
+.input::-webkit-scrollbar {
+  width: 0.2rem;
+}
+
+.input::-webkit-scrollbar-thumb {
+  background-color: #ff4500; /* Color of the scrollbar thumb */
+  border-radius: 0.5rem;
+}
+
+.input::-webkit-scrollbar-track {
+  background-color: #000; /* Color of the scrollbar track */
+}
+
+.para {
+  display: inline-block;
+  line-height: 4rem;
+  margin: 0;
+  padding: 0;
+  font-size: 3rem;
+}
+
+.heading {
+  display: inline-block;
+  line-height: 6rem;
+  margin: 0;
+  padding: 0;
+  font-size: 5rem;
 }

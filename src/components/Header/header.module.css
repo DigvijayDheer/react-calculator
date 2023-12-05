@@ -1,4 +1,10 @@
 .headerContainer {
-  background-color: orangered;
   height: 5vh;
+  background-color: #000;
+  color: #ff4500;
+  font-size: 1.6rem;
+  font-weight: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
