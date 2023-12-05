@@ -75,6 +75,3 @@ This project is licensed under the [MIT License](LICENSE.md).
 
 The Calculator App is hosted at [Your Hosted Link](https://conventional-calculator.netlify.app/).
 
----
-
-Feel free to customize the sections as needed and replace the placeholder `[Your Hosted Link](#)` with the actual hosted link once your application is deployed.
