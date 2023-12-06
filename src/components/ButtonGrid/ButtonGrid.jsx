@@ -1,4 +1,4 @@
-// Design and Developed by Digvijay Dheer
+// Designed and Developed by Digvijay Dheer
 
 // Importing necessary modules and components
 import React from "react";

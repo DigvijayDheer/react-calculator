@@ -1,4 +1,4 @@
-/* Design and Developed by Digvijay Dheer */
+/* Designed and Developed by Digvijay Dheer */
 
 /* Styles for the display area of the calculator */
 .display {
@@ -25,6 +25,7 @@
   max-width: 100%; /* Set maximum width to 100% of the parent container */
   padding: 0.5rem; /* Add padding within the input area */
   resize: none; /* Disable text area resizing */
+  margin-right: 1rem;
 }
 
 /* Custom scrollbar styles for the input area */
